@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:zadanie1_kanas"
+             x:Class="zadanie1_kanas.MainPage"
+                  MasterBehavior="Popover">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" BackgroundColor="White">
+            <ContentPage.Content>
+
+                <StackLayout Orientation="Vertical">
+
+                    <StackLayout HeightRequest="75" BackgroundColor="#00c853">
+                        <Label Text="FEIkárske Noviny" FontSize="26" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="White"/>
+                    </StackLayout>
+                    
+                    <ListView x:Name="menuItemsList" RowHeight="60" SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Spacing="20" Padding="20,10,0,10" BackgroundColor="#e0e0e0">
+                                            <Image Source="{Binding IconURL}" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" />
+                                            <Label Text="{Binding Title}" VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Padding="10">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label Text="Detail Page">
+                    </Label>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

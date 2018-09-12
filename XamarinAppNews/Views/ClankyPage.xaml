@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zadanie1_kanas.ClankyPage"
+             Title="Články">
+    <ContentPage.Content>
+
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Image}" HeightRequest="60" WidthRequest="60" Aspect="AspectFit"  HorizontalOptions="Center" />
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Nadpis}" FontSize="22" Font="Bold"/>
+                                        <Label Text="{Binding Kategoria}" FontSize="8" Font="Italic"/>
+                                    </StackLayout>
+                                    <Label Text="{Binding Obsah}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

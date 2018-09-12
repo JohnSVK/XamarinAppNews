@@ -1,0 +1,2 @@
+android.app.Application
+zadanie1_kanas.Android

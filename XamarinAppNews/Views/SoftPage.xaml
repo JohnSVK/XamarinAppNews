@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zadanie1_kanas.Views.SoftPage"
+             Title="Softvéry pre študentov">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btn1" Image="inf.jpg" Text="Softvéry pre informatikov" TextColor="White" Grid.Row="0" Grid.Column="0" WidthRequest="100"/>
+        <Button x:Name="btn2" Image="hardware.jpg" Text="Softvéry pre hardvéristov" TextColor="White" Grid.Row="1" Grid.Column="0" />
+        <Button x:Name="btn3" Image="fyz.jpg" Text="Softvéry pre fyzikov a elektronikov" TextColor="White" Grid.Row="2" Grid.Column="0" />
+    </Grid>
+</ContentPage>

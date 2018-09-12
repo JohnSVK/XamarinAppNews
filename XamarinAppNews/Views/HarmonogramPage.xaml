@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zadanie1_kanas.Views.HarmonogramPage"
+             Title="Harmonogram štúdia">
+    <ContentPage.Content>
+
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding udalostName}" FontSize="24" Font="Bold"/>
+                                    <Label Text="-" FontSize="6" Font="Italic"/>
+                                    <Label Text="{Binding udalostType}" FontSize="8" Font="Italic"/>
+                                </StackLayout>
+                                <Label Text="{Binding udalostDate}" FontSize="8" Font="Italic"/>
+                            </StackLayout>
+
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>

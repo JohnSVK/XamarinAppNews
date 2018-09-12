@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zadanie1_kanas.Views.RozvrhPage"
+             Title="Rozvrh skúšok">
+    <ContentPage.Content>
+
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding kod}" FontSize="8" Font="Italic"/>
+                                    <Label Text="-" FontSize="6" Font="Italic"/>
+                                    <Label Text="{Binding predmet}" FontSize="24" Font="Bold"/>
+                                    <Label Text="-" FontSize="6" Font="Italic"/>
+                                    <Label Text="{Binding pracovisko}" FontSize="4" Font="Italic"/>
+                                </StackLayout>
+
+                                <Label Text="Riadny termín:" FontSize="10" Font=""/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding RTdate}" FontSize="8" Font="Italic"/>
+                                    <Label Text="{Binding RTcas}" FontSize="8" Font="Italic"/>
+                                    <Label Text="{Binding RTmiesto}" FontSize="8" Font="Italic"/>
+                                </StackLayout>
+
+                                <Label Text="Opravný termín: " FontSize="10" Font=""/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding OTdate}" FontSize="8" Font="Italic"/>
+                                    <Label Text="{Binding OTcas}" FontSize="8" Font="Italic"/>
+                                    <Label Text="{Binding OTmiesto}" FontSize="8" Font="Italic"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>
